@@ -26,6 +26,7 @@ const relevantEvents = new Set([
   'customer.subscription.deleted',
 ]);
 
+/* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'POST') {
     const buf = await buffer(req);
